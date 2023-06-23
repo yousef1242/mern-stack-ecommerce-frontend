@@ -1,0 +1,25 @@
+.order-details-page{
+    padding: 150px 0;
+    min-height: calc(100vh - 61px);
+}
+.order-details-page .container .price-section{
+    border: 1px solid rgba(0,0,0,.03);
+}
+.order-details-page .container a{
+    text-decoration: none;
+    color: #000;
+}
+.order-details-page .container .main{
+    border: 1px #ebe6e6 solid;
+}
+.order-details-page .container .quantity-span{
+    height: 25px;
+    padding: 10px;
+    margin-left: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.5);
+}

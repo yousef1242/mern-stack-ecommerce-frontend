@@ -1,0 +1,15 @@
+.feature-section{
+    background-color: #efefef;
+    padding: 100px 0;
+}
+.feature-section .container img{
+    width: 150px;
+    object-fit: contain;
+    height: 150px;
+}
+.feature-section .container h5{
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 25px;
+    color: #000;
+}

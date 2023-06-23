@@ -1,0 +1,9 @@
+.products-admin-dahsboard{
+    padding: 150px 0;
+}
+.products-admin-dahsboard .container::-webkit-scrollbar{
+    display: none;
+}
+.products-admin-dahsboard .container{
+    overflow-x: scroll;
+}

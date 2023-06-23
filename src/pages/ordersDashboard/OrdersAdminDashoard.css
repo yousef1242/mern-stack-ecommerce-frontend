@@ -1,0 +1,9 @@
+.orders-dashboard-page{
+    padding: 150px 0;
+}
+.orders-dashboard-page .container::-webkit-scrollbar{
+    display: none;
+}
+.orders-dashboard-page .container{
+    overflow-x: scroll;
+}

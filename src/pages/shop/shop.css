@@ -1,0 +1,14 @@
+.shop-page{
+    min-height: calc(100vh - 61px);
+    padding-top: 150px;
+}
+.shop-page .filter-section i{
+    padding: 10px;
+    font-size: 19px;
+    cursor: pointer;
+}
+.shop-page .link-section a{
+    text-decoration: none;
+    color: #777;
+    font-size: 19px;
+}

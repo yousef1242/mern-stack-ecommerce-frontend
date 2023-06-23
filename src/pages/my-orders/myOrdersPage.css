@@ -1,0 +1,10 @@
+.my-orders-page{
+    padding: 150px 0;
+    min-height: calc(100vh - 61px);
+}
+.my-orders-page .container::-webkit-scrollbar{
+    display: none;
+}
+.my-orders-page .container{
+    overflow-x: scroll;
+}

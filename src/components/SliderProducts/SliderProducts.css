@@ -1,0 +1,43 @@
+.slider-section{
+    overflow: hidden;
+}
+.slider-section .container{
+    overflow-x: scroll;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.slider-section .container::-webkit-scrollbar{
+    display: none;
+}
+.slider-section .image-div{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+}
+.slider-section .image-div img{
+    height: 200px;
+    object-fit: cover;
+    transition: .3s;
+}
+.slider-section .container a{
+    text-decoration: none;
+}
+.slider-section .container .info-product p{
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.slider-section .container span{
+    font-size: 21px;
+    color: #000;
+}
+.slider-section .container .text-decoration-line-through{
+    color: #777;
+    margin-right: 20px;
+}
+.slider-section .image-div:hover img{
+    transform: scale(1.1);
+}

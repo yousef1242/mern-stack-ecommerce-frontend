@@ -1,0 +1,81 @@
+.check-out-page{
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.check-out-page .col-lg-7 form {
+    height: 100%;
+}
+.check-out-page .col-lg-7 form .form-group{
+    margin-bottom: 15px;
+}
+.check-out-page .col-lg-7 form .form-group label{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 19px;
+    width: 100%;
+    display: block;
+}
+.check-out-page .col-lg-7 form .form-group input{
+    padding: 10px;
+    border: 1px solid #d4cfcf;
+    width: 100%;
+}
+.check-out-page .col-lg-7 form .form-group input:focus{
+    border: 1px solid #d4cfcf;
+    outline: 0px;
+}
+.check-out-page .check-out-processed{
+    margin-top: 20px;
+    padding: 10px 15px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    transition: .3s;
+    border: 0;
+    outline: none;
+    font-size: 21px;
+}
+.check-out-page .check-out-processed:hover{
+    opacity: .8;
+}
+/* loading cash btn */
+.check-out-page #col {
+    width: 50%;
+    margin: 0 auto;
+    display: inherit;
+  }
+  .check-out-page #img-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ .check-out-page #col .loader {
+    border: 3px solid #daa777;
+    position: inherit;
+    border-radius: 30px;
+    height: 20px;
+    margin: -15px 0 0 -15px;
+    opacity: 0;
+    width: 20px;
+    display: block;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes pulsate {
+    0% {
+      transform: scale(.1);
+      opacity: 0.0;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }

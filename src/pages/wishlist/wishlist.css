@@ -1,0 +1,16 @@
+.wishlist-page{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    min-height: calc(100vh - 61px);
+}
+.wishlist-page h1{
+    margin-bottom: 100px;
+}
+.wishlist-page img{
+    object-fit: contain;
+    height: 200px;
+    width:200px;
+}
+.wishlist-page i{
+    cursor: pointer;
+}

@@ -1,0 +1,9 @@
+.users-dashboard-page{
+    padding: 150px 0;
+}
+.users-dashboard-page .container::-webkit-scrollbar{
+    display: none;
+}
+.users-dashboard-page .container{
+    overflow-x: scroll;
+}

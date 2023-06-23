@@ -1,0 +1,55 @@
+.css-8atqhb{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    top: 0;
+    z-index: 9999;
+    background-color: #0000000d;
+}
+.css-8atqhb .container{
+    background-color: #fff;
+    height: 550px;
+    width: 500px;
+}
+.css-8atqhb .container .css-heg063-MuiTabs-flexContainer{
+    justify-content: center;
+}
+.css-8atqhb .container form .form-group{
+    margin-bottom: 15px;
+}
+.css-8atqhb .container form .form-group label{
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #000;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+}
+.css-8atqhb .container form .form-group input{
+    padding: 10px;
+    border: 1px solid #efefef;
+    width: 100%;
+}
+.css-8atqhb .container form .form-group input:hover{
+    border: 1px solid #d4cfcf;
+}
+.css-8atqhb .container form .form-group input:focus{
+    border: 1px solid #d4cfcf;
+    outline: 0px;
+}
+.css-8atqhb .container form .form-btn{
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 0px;
+    outline: none;
+    border: 0px;
+    margin-top: 15px;
+    transition: .3s;
+}
+.css-8atqhb .container form .form-btn:hover{
+    opacity: .8;
+}

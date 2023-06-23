@@ -1,0 +1,107 @@
+.add-product-dashboard{
+    padding: 150px 0;
+}
+.add-product-dashboard .container {
+    width: 60%;
+}
+.add-product-dashboard .container form .form-group{
+    margin-bottom: 20px;
+}
+.add-product-dashboard .container form .form-group input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    background-color: #e2e2e257;
+}
+.add-product-dashboard .container form .form-group .file-input{
+    width: 200px;
+    height: 200px;
+    display: none;
+}
+.add-product-dashboard .container form .form-group .file-span{
+    display: block;
+    margin-bottom: 15px;
+}
+.add-product-dashboard .container form .form-group .file-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+    background-color: #e2e2e257;
+}
+.add-product-dashboard .container form .form-group select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    background-color: #e2e2e257;
+}
+.add-product-dashboard .container form .form-group label{
+    width: 100%;
+    margin-bottom: 15px;
+    display: block;
+}
+.add-product-dashboard .container form .form-group textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    background-color: #e2e2e257;
+}
+.add-product-dashboard .container form .images-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+.add-product-dashboard .container form .fa-trash{
+    position: absolute;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+}
+.add-product-dashboard .container form .image-download{
+    height: 200px;
+    width: 200px;
+}
+.image-download img{
+    object-fit: cover;
+}
+.add-product-dashboard .container form .add-image-btn{
+    background-color: #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #fff;
+    transition: .3s;
+    cursor: pointer;
+    border: 0;
+    margin-top: 20px;
+    outline: none;
+}
+.add-product-dashboard .container form .add-btn{
+    width: 100%;
+    background-color: #000;
+    padding: 10px 15px;
+    color: #fff;
+    transition: .3s;
+    border: 0;
+    margin-top: 30px;
+    outline: none;
+}
+.add-product-dashboard .container form .add-btn:hover ,.add-product-dashboard .container form .add-image-btn:hover{
+    opacity: .8;
+}
+@media screen and (max-width:536px) {
+    .add-product-dashboard .container{
+        width: 100%;
+    }
+    
+}

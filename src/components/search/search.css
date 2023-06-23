@@ -1,0 +1,29 @@
+.search-body form{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.offcanvas-header{
+    justify-content: end!important;
+    padding-right: 50px!important;
+}
+.search-body form input{
+    padding: 30px;
+    border: 0px;
+    border-bottom: 2px solid #777;
+    width: 100%;
+    font-size: 40px;
+}
+.search-body form input:focus{
+    border: 0px;
+    border-bottom: 2px solid #777;
+    outline: none;
+}
+@media screen and (max-width:559px) {
+    .search-body form input{
+        font-size: 20px;
+    }
+}
