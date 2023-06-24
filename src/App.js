@@ -44,9 +44,13 @@ function App() {
   const [up, setUp] = useState(false);
   useEffect(() => {
     dispatch(setAllProductsApiCall());
-    setTimeout(() => {
-        setLoading(false);
-    }, 5000);
+  }, []);
+  useEffect(() => {
+    if (products.length > 0) {
+      setLoading(false);
+    }
+  }, [products]);
+  useEffect(() => {
     const handleScroll = () => {
       if (window.pageYOffset > 89.11124420166016) {
         setUp(true);
@@ -58,7 +62,7 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [loading, products]);
+  }, []);
   return (
     <>
       {!loading ? (

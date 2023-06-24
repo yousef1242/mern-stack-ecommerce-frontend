@@ -114,14 +114,13 @@ const CheckoutPage = () => {
         card: cardElement,
         billing_details: billingInfo,
       });
-
+      setVisaLoading(true);
       const confirmPayment = await stripe.confirmCardPayment(
         paymentIntent.data.client_secret,
         {
           payment_method: paymentMethodObj.paymentMethod.id,
         }
       );
-
       if (confirmPayment.error) {
         console.log(confirmPayment.error.message);
       }
@@ -142,13 +141,14 @@ const CheckoutPage = () => {
         })
       );
       navigate("/");
-      setVisaLoading(true);
       toast.success("Payment has been successful");
       dispatch(setDeleteAllProductsCart());
       dispatch(setDeleteAllProductsCartApiCall());
       cardElement.clear();
     } catch (error) {
       console.log(error.message);
+      setVisaLoading(false);
+      toast.error("Card number is required");
     }
   };
   return (
