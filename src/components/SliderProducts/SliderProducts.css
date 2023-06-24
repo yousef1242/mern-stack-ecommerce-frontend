@@ -1,15 +1,3 @@
-.slider-section{
-    overflow: hidden;
-}
-.slider-section .container{
-    overflow-x: scroll;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-.slider-section .container::-webkit-scrollbar{
-    display: none;
-}
 .slider-section .image-div{
     display: flex;
     justify-content: center;

@@ -104,7 +104,7 @@ const CartPage = () => {
                             </div>
                             <div className="col-8">
                               <div className="row w-100 m-0">
-                                <div className="col-6 col-md-4">
+                                <div className="col-12 mb-md-0 mb-4 col-md-6">
                                   <span>{cart?.nameProduct}</span>
                                   <span className="d-block price-span">
                                     EGP
@@ -113,7 +113,7 @@ const CartPage = () => {
                                         cart?.product?.price}
                                   </span>
                                 </div>
-                                <div className="col-6 col-md-4 text-center">
+                                <div className="col-6 col-md-6 text-center">
                                   <div className="quantaty-section">
                                     <button
                                       disabled={
@@ -140,15 +140,6 @@ const CartPage = () => {
                                       +
                                     </button>
                                   </div>
-                                </div>
-                                <div className="col-6 col-md-4 text-md-end">
-                                  {" "}
-                                  EGP
-                                  {cart?.disCountPrecent > 0
-                                    ? (cart?.product?.disCountPrecent / 100) *
-                                      cart?.product?.price *
-                                      cart?.quantaty
-                                    : cart?.product?.price * cart?.quantaty}
                                 </div>
                                 <div className="col-6 col-md-12 text-center text-md-end">
                                   <i

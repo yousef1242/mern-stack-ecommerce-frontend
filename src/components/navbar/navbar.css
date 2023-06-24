@@ -152,3 +152,8 @@
         width: 90%;
     }
 }
+@media screen and (max-width:532px) {
+    .navbar .container .row .text-end a{
+        font-size: 15px;
+    }
+}

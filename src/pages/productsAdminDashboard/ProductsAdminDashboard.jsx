@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Table from "react-bootstrap/esm/Table";
 import "./productsAdminDashboard.css";
 import {
@@ -57,7 +57,11 @@ const ProductsAdminDashboard = () => {
                       <td>{index + 1}</td>
                       <td>
                         <img
-                          style={{ width: "100px", height: "100px" }}
+                          style={{
+                            width: "100px",
+                            height: "100px",
+                            objectFit: "contain",
+                          }}
                           src={product?.images[0]}
                           alt=""
                         />
@@ -84,7 +88,12 @@ const ProductsAdminDashboard = () => {
                             color: "#fff",
                           }}
                         >
-                          Update
+                          <Link
+                            style={{ color: "#fff", textDecoration: "none" }}
+                            to={`/products/${product?.name}/update`}
+                          >
+                            Update
+                          </Link>
                         </button>
                       </td>
                       <td>

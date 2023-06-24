@@ -29,6 +29,7 @@ import ProductsAdminDashboard from "./pages/productsAdminDashboard/ProductsAdmin
 import AddProductAdminDashboard from "./pages/addProductDashboard/AddProductAdminDashboard";
 import CategoriesAdminDashboard from "./pages/categoriesDashboard/CategoriesAdminDashboard";
 import AddCategoryAdminDashboard from "./pages/addCategoryDashboard/AddCategoryAdminDashboard";
+import UpdateProductPage from "./pages/updateProduct/UpdateProductPage";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
@@ -161,6 +162,12 @@ function App() {
                 ) : (
                   <Navigate to={"/"} />
                 )
+              }
+            />
+            <Route
+              path="/products/:productName/update"
+              element={
+                user?.isAdmin ? <UpdateProductPage /> : <Navigate to={"/"} />
               }
             />
           </Routes>

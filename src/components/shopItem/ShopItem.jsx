@@ -25,9 +25,9 @@ const ShopItem = ({ shopProducts, grid }) => {
                 )}
               </Link>
               <div className="product-info-section">
-                <div className="row">
+                <div className="row m-0 w-100">
                   <div className="col-8">
-                    <p>{product?.name}</p>
+                    <p>{product?.name.slice(0,40)}...</p>
                   </div>
                   {!user?.isAdmin && (
                     <div className="col-4 text-center">

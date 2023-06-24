@@ -78,3 +78,23 @@ export function setAddProductApiCall(data) {
     }
   };
 }
+
+// add product
+export function seUpdateProductApiCall(newData, productName) {
+  return async (dispatch, getState) => {
+    try {
+      const { data } = await request.put(
+        `/api/products/update/${productName}`,
+        newData,
+        {
+          headers: {
+            Authorization: "bearer " + getState().auth.user.token,
+          },
+        }
+      );
+      toast.success(data.message);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
