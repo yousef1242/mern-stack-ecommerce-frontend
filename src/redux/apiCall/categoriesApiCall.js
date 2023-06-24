@@ -1,34 +1,9 @@
 import {
   setAllCategories,
-  setMenCategories,
-  setWomenCategories,
 } from "../Slice/categoriesSlice";
 import request from "../request";
 import { toast } from "react-toastify";
 
-// get men categories
-export function setMenCategoriesApiCall() {
-  return async (dispatch) => {
-    try {
-      const { data } = await request.get("/api/categories/men");
-      dispatch(setMenCategories(data));
-    } catch (error) {
-      console.log(error);
-    }
-  };
-}
-
-// get women categories
-export function setWomenCategoriesApiCall() {
-  return async (dispatch) => {
-    try {
-      const { data } = await request.get("/api/categories/women");
-      dispatch(setWomenCategories(data));
-    } catch (error) {
-      console.log(error);
-    }
-  };
-}
 
 // get all categories
 export function setAllCategoriesApiCall() {

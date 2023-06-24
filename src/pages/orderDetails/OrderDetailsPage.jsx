@@ -71,6 +71,17 @@ const OrderDetailsPage = () => {
               </h5>
             </div>
           </div>
+          <div className="order-user-info pt-5">
+            <h3>Billing address</h3>
+            <span className="mb-3 d-block">
+              {singleOrder?.firstName} {""} {singleOrder?.secondName}
+            </span>
+            <span className="mb-3 d-block">{singleOrder?.email}</span>
+            <span className="mb-3 d-block">{singleOrder?.phoneNumber}</span>
+            <span className="mb-3 d-block">{singleOrder?.Governorate}</span>
+            <span className="mb-3 d-block">{singleOrder?.city}</span>
+            <span>{singleOrder?.address}</span>
+          </div>
         </div>
       </div>
     </>

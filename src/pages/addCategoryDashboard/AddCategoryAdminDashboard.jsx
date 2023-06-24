@@ -1,15 +1,22 @@
 import { useDispatch } from "react-redux";
 import "./AddCategoryAdminDashboard.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { setAddCategoryApiCall } from "../../redux/apiCall/categoriesApiCall";
+import { setAddCategory } from "../../redux/Slice/categoriesSlice";
 
 const AddCategoryAdminDashboard = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [gender, setGender] = useState("");
   const [title, setTitle] = useState("");
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  }, []);
   const handleFormSubmit = (event) => {
     event.preventDefault();
     if (!gender || !title) {
@@ -18,6 +25,12 @@ const AddCategoryAdminDashboard = () => {
     }
     dispatch(
       setAddCategoryApiCall({
+        title: title,
+        gender: gender,
+      })
+    );
+    dispatch(
+      setAddCategory({
         title: title,
         gender: gender,
       })

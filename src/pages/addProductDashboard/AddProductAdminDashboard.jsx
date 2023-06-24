@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import {
+  setAllCategoriesApiCall,
   setMenCategoriesApiCall,
   setWomenCategoriesApiCall,
 } from "../../redux/apiCall/categoriesApiCall";
@@ -7,15 +8,12 @@ import "./addProductAdminDashboard.css";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { setAddProductApiCall } from "../../redux/apiCall/productsApiCall";
-import { useNavigate } from "react-router-dom"
-
-
+import { useNavigate } from "react-router-dom";
 
 const AddProductAdminDashboard = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { menCategories } = useSelector((state) => state.categories);
-  const { womenCategories } = useSelector((state) => state.categories);
+  const { allCategories } = useSelector((state) => state.categories);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState();
@@ -47,8 +45,11 @@ const AddProductAdminDashboard = () => {
     setImageFileArray(ImageFileArray.filter((_, i) => i !== index));
   };
   useEffect(() => {
-    dispatch(setMenCategoriesApiCall());
-    dispatch(setWomenCategoriesApiCall());
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+    dispatch(setAllCategoriesApiCall());
   }, []);
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -83,7 +84,7 @@ const AddProductAdminDashboard = () => {
       formData.append("imageUrls", imageLinkarray[index]);
     }
     dispatch(setAddProductApiCall(formData));
-    navigate("/")
+    navigate("/");
   };
   return (
     <>
@@ -149,13 +150,17 @@ const AddProductAdminDashboard = () => {
                   Select category
                 </option>
                 {gender === "men" &&
-                  menCategories?.map((cat) => (
-                    <option value={cat.title}>{cat.title}</option>
-                  ))}
+                  allCategories
+                    ?.filter((cat) => cat.gender === "men")
+                    .map((cat) => (
+                      <option value={cat.title}>{cat.title}</option>
+                    ))}
                 {gender === "women" &&
-                  womenCategories?.map((cat) => (
-                    <option value={cat.title}>{cat.title}</option>
-                  ))}
+                  allCategories
+                    ?.filter((cat) => cat.gender === "women")
+                    .map((cat) => (
+                      <option value={cat.title}>{cat.title}</option>
+                    ))}
               </select>
             </div>
             <div className="form-group">

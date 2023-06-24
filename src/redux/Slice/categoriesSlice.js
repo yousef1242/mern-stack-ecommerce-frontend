@@ -8,12 +8,6 @@ export const categoriesSlice = createSlice({
     allCategories: null,
   },
   reducers: {
-    setMenCategories(state, action) {
-      state.menCategories = action.payload;
-    },
-    setWomenCategories(state, action) {
-      state.womenCategories = action.payload;
-    },
     setAllCategories(state, action) {
       state.allCategories = action.payload;
     },
@@ -21,6 +15,9 @@ export const categoriesSlice = createSlice({
       state.allCategories = state.allCategories.filter(
         (cat) => cat._id !== action.payload._id
       );
+    },
+    setAddCategory(state, action) {
+      state.allCategories.push(action.payload);
     },
   },
 });
@@ -31,6 +28,7 @@ export const {
   setWomenCategories,
   setAllCategories,
   setDeleteCategory,
+  setAddCategory,
 } = categoriesSlice.actions;
 
 export default categoriesSlice.reducer;

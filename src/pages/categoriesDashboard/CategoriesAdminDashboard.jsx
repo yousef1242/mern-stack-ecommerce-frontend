@@ -23,14 +23,17 @@ const CategoriesAdminDashboard = () => {
       top: 0,
       behavior: "instant",
     });
-    const fetchOrders = async () => {
+    const fetchCategories = async () => {
       await dispatch(setAllCategoriesApiCall());
     };
-    fetchOrders();
+    fetchCategories();
   }, [dispatch, user]);
   return (
     <>
       <div className="categories-dashboard">
+        <h1 className="fw-bold text-center" style={{ marginBottom: "100px" }}>
+          All categories
+        </h1>
         <div className="container">
           {allCategories?.length > 0 ? (
             <Table style={{ textAlign: "center" }} striped bordered hover>
